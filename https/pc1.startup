@@ -1,0 +1,12 @@
+echo "Restarting network..."
+service networking start
+
+echo "Install rootCA.cert"
+ln -s /usr/share/ca-certificates/rootCA.cert.pem /etc/ssl/certs/rootCA.cert.pem
+echo "rootCA.cert.pem" >> /etc/ca-certificates.conf
+update-ca-certificates
+
+echo "Set SSLKEYLOGFILE"
+echo "export SSLKEYLOGFILE=~/.ssl-key.log" >> /root/.bashrc
+source /root/.bashrc
+
