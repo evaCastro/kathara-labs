@@ -1,6 +1,3 @@
-# kathara-labs
-Kathará configuration laboratories
-
 ### Configuration files for Kathará HTTPS scenario:
 -  IP addresses, routes, certificates, Apache server.
 
