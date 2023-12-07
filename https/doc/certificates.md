@@ -92,7 +92,7 @@ Generate private key for Intermediate-CA (enter PEM pass phrase for Intermediate
    chmod 400 private/intermediateCA.key.pem
 ```
 
-Generate certificate signing request for Intermediate-CA (use Intermediate-CA PEM pass phrase). Organization Name value must be "Root CA Org." (from Root-CA self-signed certificate):
+Generate certificate signing request for Intermediate-CA (use Intermediate-CA PEM pass phrase). Organization Name value must be "Root CA Org." (policy_strict configuration):
 ```
    openssl req -config ../../openssl_intermediate.cnf \
         -new -sha256 \
@@ -104,7 +104,7 @@ Example values for this certificate:
    - Country Name (2 letter code) [GB]:ES
    - State or Province Name [England]:Madrid
    - Locality Name []:Fuenlabrada
-   - Organization Name [Alice Ltd]:Root CA Org.
+   - **Organization Name [Alice Ltd]:Root CA Org.**
    - Organizational Unit Name []:Intermediate CA
    - Common Name []:Intermediate-CA
    - Email Address []:admin@intermediateCA.com
