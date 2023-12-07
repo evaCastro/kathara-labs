@@ -1,5 +1,7 @@
 ## Certificates
 
+From documentation [https://jamielinux.com/docs/openssl-certificate-authority/index.html](https://jamielinux.com/docs/openssl-certificate-authority/index.html).
+
 <img src="https://github.com/evaCastro/kathara-labs/blob/main/https/images/https-scenario.png"
      alt="TLS handshake"
      style="float: left; margin-right: 10px;" width=700 />
