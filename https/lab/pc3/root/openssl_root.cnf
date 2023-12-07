@@ -1,5 +1,5 @@
 # OpenSSL root CA configuration file.
-# Copy to `/root/ca/openssl.cnf`.
+# Copy to `/root/openssl_root.cnf` in pc3
 
 [ ca ]
 # `man ca`
