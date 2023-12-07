@@ -10,6 +10,8 @@ From documentation [https://jamielinux.com/docs/openssl-certificate-authority/in
 - Intermediate-CA has a certificate signed by Root-CA.
 - Root-CA is a self-signed certificate
 
+The Root-CA will be configured as policy_strict, as the root CA is only being used to create intermediate CAs ([see file openssl_root.cnf](https://github.com/evaCastro/kathara-labs/blob/main/https/doc/openssl_root.cnf)). The intermediate CA  will be configured as policy_any ([see file openssl_intermediate.cnf](https://github.com/evaCastro/kathara-labs/blob/main/https/doc/openssl_intermediate.cnf)) to sign clients and servers certificates.
+
 ### Start scenario
 
 From repository directory: 
@@ -90,7 +92,7 @@ Generate private key for Intermediate-CA (enter PEM pass phrase for Intermediate
    chmod 400 private/intermediateCA.key.pem
 ```
 
-Generate certificate signing request for Intermediate-CA (use Intermediate-CA PEM pass phrase). Organization Name value must be "Root CA Org." (from Root-CA self-signed certificate):
+Generate certificate signing request for Intermediate-CA (use Intermediate-CA PEM pass phrase). Organization Name value must be "Root CA Org.", also Country and State (policy_strict configuration):
 ```
    openssl req -config ../../openssl_intermediate.cnf \
         -new -sha256 \
@@ -99,10 +101,10 @@ Generate certificate signing request for Intermediate-CA (use Intermediate-CA PE
 ```
 
 Example values for this certificate:
-   - Country Name (2 letter code) [GB]:ES
-   - State or Province Name [England]:Madrid
+   - **Country Name (2 letter code) [GB]:ES**
+   - **State or Province Name [England]:Madrid**
    - Locality Name []:Fuenlabrada
-   - Organization Name [Alice Ltd]:Root CA Org.
+   - **Organization Name [Alice Ltd]:Root CA Org.**
    - Organizational Unit Name []:Intermediate CA
    - Common Name []:Intermediate-CA
    - Email Address []:admin@intermediateCA.com
