@@ -182,4 +182,45 @@ Validity
    Not Before: Dec  4 19:03:44 2023 GMT
    Not After : Dec 13 19:03:44 2024 GMT
 Subject: C = ES, ST = Madrid, L = Fuenlabrada, O = NetGUI Org, OU = NetGUI, CN = pc2.emp2.com
+```
+
+## Install certificates
+pc3 has the 3 certificates: Root-CA, Intermediate-CA and pc2.emp2.com CA and the pc2.emp2.com private key. We will use the share directory to extract these files.
+From pc3 terminal:
+```
+   cp /root/ca/rootCA/certs/rootCA.cert.pem /share # root-CA
+   cp /root/ca/intermediateCA/certs/intermediateCA.cert.pem /share # intermediate-CA
+   cp /root/ca/intermediateCA/certs/pc2.emp2.com.cert.pem /share # pc2.emp2.com CA
+   cp /root/ca/intermediateCA/private/pc2.emp2.com.key.pem /share # pc2 private key
+```
+
+pc1 requires root-CA. From pc1 terminal:
+```
+   cp /share/rootCA.cert.pem /usr/share/ca-certificates/rootCA.cert.pem
+   ln -s /usr/share/ca-certificates/rootCA.cert.pem /etc/ssl/certs/rootCA.cert.pem
+   echo "rootCA.cert.pem" >> /etc/ca-certificates.conf
+   update-ca-certificates
+```
+
+pc2 requires pc2.emp2.com CA, pc2 private key and intermediate-CA:
+```
+   cp /share/pc2.emp2.com.key.pem /etc/apache2/conf/ssl.key
+   cp /share/pc2.emp2.com.cert.pem /etc/apache2/conf/ssl.cert
+   cp /share/intermediateCA.cert.pem /etc/apache2/conf/ssl.cert
+```
+
+## Apache configuration
+File /etc/apache2/ports.conf
+```
+<IfModule ssl_module>
+        Listen 443
+        <VirtualHost *:443>
+                ServerName pc2.emp2.com
+                SSLEngine on
+                SSLCertificateFile "conf/ssl.cert/pc2.emp2.com.cert.pem"
+                SSLCertificateKeyFile "conf/ssl.key/pc2.emp2.com.key.pem"
+                SSLCertificateChainFile "conf/ssl.cert/intermediate.cert.pem"
+        </VirtualHost>
+</IfModule>
+```
 
