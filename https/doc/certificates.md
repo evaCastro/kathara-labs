@@ -10,6 +10,8 @@ From documentation [https://jamielinux.com/docs/openssl-certificate-authority/in
 - Intermediate-CA has a certificate signed by Root-CA.
 - Root-CA is a self-signed certificate
 
+The Root-CA will be configured as policy_strict, as the root CA is only being used to create intermediate CAs ([see file openssl_root.conf](https://github.com/evaCastro/kathara-labs/blob/main/https/doc/openssl_root.conf)). The intermediate CA  will be configured as policy_any ([see file openssl_intermediate.conf](https://github.com/evaCastro/kathara-labs/blob/main/https/doc/openssl_intermediate.conf)) to sign clients and servers certificates.
+
 ### Start scenario
 
 From repository directory: 
