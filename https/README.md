@@ -4,6 +4,10 @@
      alt="TLS handshake"
      style="float: left; margin-right: 10px;" width=700 />
 
+pc3 represents certification authority and generates Root CA auto-signed certificate, Intermediate CA certificate and pc2.emp2.com certificate.
+pc2 runs an Apache server.
+pc1 requests https://pc2.emp2.com
+
 # Certificates
 
 - pc2.emp2.com has a certificate signed by Intermediate-CA.
