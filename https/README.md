@@ -4,9 +4,9 @@
      alt="TLS handshake"
      style="float: left; margin-right: 10px;" width=700 />
 
-pc3 represents certification authority and generates Root CA auto-signed certificate, Intermediate CA certificate and pc2.emp2.com certificate.
-pc2 runs an Apache server.
-pc1 requests https://pc2.emp2.com
+- pc3 represents certification authority and generates Root CA auto-signed certificate, Intermediate CA certificate and pc2 certificate. See [how to generate these certificates inside this kathara network scenario](https://github.com/evaCastro/kathara-labs/blob/main/https/doc/certificates.md)
+- pc2 runs an Apache server.
+- pc1 requests https://pc2.emp2.com
 
 # Certificates
 
