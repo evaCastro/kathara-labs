@@ -18,9 +18,9 @@ Installed certificates
 
 Start scenario
 
-    From repository directory: kathara start --shared --terminal gnome-terminal
-    From pc2 terminal, start apache2: /etc/init.d/apache2 start
-    From pc1 terminal: wget https://pc2.emp2.com/
+    From repository directory: `kathara lstart --shared --terminal gnome-terminal`
+    From pc2 terminal, start apache2 sever: `/etc/init.d/apache2 start`
+    From pc1 terminal: `wget https://pc2.emp2.com/`
 
 
 <img src="https://github.com/evaCastro/kathara-labs/blob/main/https/images/certificate-chain.png"
