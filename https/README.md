@@ -3,7 +3,7 @@
 
 <img src="https://github.com/evaCastro/kathara-labs/blob/main/https/images/https-scenario.png"
      alt="TLS handshake"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" width=700 />
 
 Certificates
 
@@ -25,8 +25,8 @@ Start scenario
 
 <img src="https://github.com/evaCastro/kathara-labs/blob/main/https/images/certificate-chain.png"
      alt="TLS handshake"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" width=700 />
 
 <img src="https://github.com/evaCastro/kathara-labs/blob/main/https/images/TLS13.png"
      alt="TLS handshake"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" width=700 />
