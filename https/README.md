@@ -21,7 +21,7 @@
 
 # Start scenario
 
-From repository directory: 
+From **lab** repository directory: 
 
    ```kathara lstart --shared --terminal gnome-terminal```
 
