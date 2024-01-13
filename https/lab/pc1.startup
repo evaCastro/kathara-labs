@@ -1,3 +1,11 @@
+
+directory="./shared/pc1"
+if [ -d $directory ]
+then
+    cp -r ./shared/pc1 /
+fi
+
+
 echo "Restarting network..."
 service networking start
 
