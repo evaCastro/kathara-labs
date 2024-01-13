@@ -4,7 +4,7 @@
      alt="TLS handshake"
      style="float: left; margin-right: 10px;" width=700 />
 
-- pc3 represents certification authority and generates Root CA self-signed certificate, Intermediate CA certificate and pc2 certificate. See [how to generate these certificates inside this kathara network scenario](https://github.com/evaCastro/kathara-labs/blob/main/https/doc/certificates.md)
+- pc3 acts as a certification authority and generates Root CA self-signed certificate, Intermediate CA certificate and pc2 certificate. See [how to generate these certificates inside this kathara network scenario](https://github.com/evaCastro/kathara-labs/blob/main/https/doc/certificates.md)
 - pc2 runs an Apache server.
 - pc1 requests https://pc2.emp2.com
 
@@ -19,7 +19,29 @@
 - pc1 has installed Root-CA certificate
 - pc2 has installed pc2.emp2.com, Intermedidate-CA and Root-CA certificates.
 
+# Pcap analysis
+
+Load [https.pcap](https://github.com/evaCastro/kathara-labs/blob/main/https/pcap/https.pcap) in Wirehark and configure [session-key file](https://github.com/evaCastro/kathara-labs/blob/main/https/pcap/ssl-key.log).
+
+<img src="https://github.com/evaCastro/kathara-labs/blob/main/https/images/certificate-chain.png"
+     alt="TLS handshake"
+     style="float: left; margin-right: 10px;" width=700 />
+
+Filter traffic using ```tls```, we only want to see TLS traffic (not TCP). pc1 has installed Root CA certificate and receives (see packet 8 in wireshark figure):
+- Intermediate CA certificate signed by Root CA
+- pc2.emp2.com certificate signed by Intermediate CA.
+
+pc1 can verify certificate chain. 
+
+Besides, pc1 and pc2 use Diffie-Hellman algorithm to establish a shared secret for a symmetric key algorithm to encrypt traffic. 
+
+<img src="https://github.com/evaCastro/kathara-labs/blob/main/https/images/TLS13.png"
+     alt="TLS handshake"
+     style="float: left; margin-right: 10px;" width=700 />
+
+
 # Start scenario
+You can get your own pcap file using kathará.
 
 From **lab** repository directory: 
 
@@ -37,20 +59,8 @@ From pc1 terminal:
 
    ```wget https://pc2.emp2.com/```
 
-Stop tcpdump and use wireshark to study traffic:
+Stop tcpdump and use wireshark to study traffic.
 
-<img src="https://github.com/evaCastro/kathara-labs/blob/main/https/images/certificate-chain.png"
-     alt="TLS handshake"
-     style="float: left; margin-right: 10px;" width=700 />
 
-Filter traffic using ```tls```, we only want to see TLS traffic (not TCP). pc1 has installed Root CA certificate and receives (see packet 8 in wireshark figure):
-- Intermediate CA certificate signed by Root CA
-- pc2.emp2.com certificate signed by Intermediate CA.
 
-pc1 can verify certificate chain. 
 
-Besides, pc1 and pc2 use Diffie-Hellman algorithm to establish a shared secret for a symmetric key algorithm to encrypt traffic. 
-
-<img src="https://github.com/evaCastro/kathara-labs/blob/main/https/images/TLS13.png"
-     alt="TLS handshake"
-     style="float: left; margin-right: 10px;" width=700 />
