@@ -4,7 +4,7 @@
      alt="HTTP server"
      style="float: left; margin-right: 10px;" width=700 />
 
-This Kathará laboratory uses the same DNS configuration of [DNS-lab](https://github.com/evaCastro/kathara-labs/blob/main/http/pcap/HTTP.cap).
+This Kathará laboratory uses the same DNS configuration of [DNS-lab](https://github.com/evaCastro/kathara-labs/blob/main/dns).
 
 ### HTTP server
    - pc2.emp2.net is running Apache server, port 80.
@@ -22,6 +22,6 @@ This Kathará laboratory uses the same DNS configuration of [DNS-lab](https://gi
              `http_proxy=http://12.0.0.1:8080`
        - `wget -m http://pc2.emp2.net/index.html`
    - See the capture files: 
-       - From pc1: [HTTP-proxy-pc1.pcap](https://github.com/evaCastro/kathara-labs/blob/main/http/pcap/HTTP-proxy-pc1.cap)
-       - From pc2: [HTTP-proxy-pc1.pcap](https://github.com/evaCastro/kathara-labs/blob/main/http/pcap/HTTP-proxy-pc2.cap)
+       - From pc1: [HTTP-proxy-pc1.pcap](https://github.com/evaCastro/kathara-labs/blob/main/http/pcap/HTTP-proxy-pc1.pcap)
+       - From pc2: [HTTP-proxy-pc2.pcap](https://github.com/evaCastro/kathara-labs/blob/main/http/pcap/HTTP-proxy-pc2.pcap)
 
