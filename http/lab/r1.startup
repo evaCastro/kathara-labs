@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Starting apache2..."
+systemctl start apache2

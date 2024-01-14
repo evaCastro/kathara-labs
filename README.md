@@ -5,4 +5,5 @@ Kathará(https://www.kathara.org/) is an open source container-based network emu
 
 Learn network protocols by studying traffic capture files:
    - [DNS: (without DNSSEC validation)](https://github.com/evaCastro/kathara-labs/blob/main/dns)
+   - [HTTP:](https://github.com/evaCastro/kathara-labs/blob/main/http)
    - [HTTPS: TLS1.3 Handshake](https://github.com/evaCastro/kathara-labs/blob/main/https)
