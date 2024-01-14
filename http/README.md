@@ -1,6 +1,6 @@
 ## Configuration for Kathará HTTP scenario:
 
-<img src="https://github.com/evaCastro/kathara-labs/blob/main/dns/images/http.png"
+<img src="https://github.com/evaCastro/kathara-labs/blob/main/http/images/http.png"
      alt="HTTP server"
      style="float: left; margin-right: 10px;" width=700 />
 
@@ -13,7 +13,7 @@ This Kathará laboratory uses the same DNS configuration of [DNS-lab](https://gi
    - r1.com is running Proxy Apache server, port 8080.
 
 ### HTTP client 
-   - From pc1: wget -m http://pc2.emp2.net/index.html
+   - From pc1: wget -m `http://pc2.emp2.net/index.html`
    - See the capture file: [HTTP.pcap](https://github.com/evaCastro/kathara-labs/blob/main/http/pcap/HTTP.cap)
   
 ### HTTP client through proxy
