@@ -7,3 +7,4 @@ Learn network protocols by studying traffic capture files:
    - [DNS:](https://github.com/evaCastro/kathara-labs/blob/main/dns) without DNSSEC validation
    - [HTTP:](https://github.com/evaCastro/kathara-labs/blob/main/http) HTTP server and HTTP proxy.
    - [HTTPS:](https://github.com/evaCastro/kathara-labs/blob/main/https) TLS1.3 Handshake
+   - [BGP:](https://github.com/evaCastro/kathara-labs/blob/main/bgp) simple configuration
