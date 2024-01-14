@@ -1,0 +1,34 @@
+auto lo
+iface lo inet loopback
+
+
+auto eth0
+iface eth0 inet static
+     address 13.7.0.1
+     netmask 255.255.0.0
+
+auto eth1
+iface eth1 inet static
+     address 13.8.0.1
+     netmask 255.255.0.0
+
+auto eth2
+iface eth2 inet static
+     address 100.7.0.30
+     netmask 255.255.255.0
+
+auto eth3
+iface eth3 inet static
+     address 100.4.0.30
+     netmask 255.255.255.0
+
+auto eth4
+iface eth4 inet static
+     address 100.6.0.30
+     netmask 255.255.255.0
+
+auto eth5
+iface eth5 inet static
+     address 100.9.0.30
+     netmask 255.255.255.0
+

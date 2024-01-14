@@ -1,0 +1,169 @@
+<nodes>
+position(120.82462094801325,-201.95659185029015); NKRouter("as30r3")
+position(221.81002320648014,2.009925410129995); NKRouter("as30r1")
+position(551.8961561783744,-0.6211521788205374); NKRouter("as40r1")
+position(505.38239719937246,266.7573684092205); NKRouter("as50r1")
+position(343.7875832493407,302.6405682725422); NKHub("hub8")
+position(-11.740488663743676,-21.57882240706077); NKRouter("as30r2")
+position(548.0651314871492,-169.02880904244466); NKRouter("as10r1")
+position(733.7657608218256,176.88188857058933); NKRouter("as60r1")
+position(676.387809066945,-228.25742994743456); NKHub("hub10")
+position(487.78884071066466,91.15329805265539); NKHub("hub13")
+position(588.0378559583936,-258.4482885516858); NKHub("hub11")
+position(462.66666666667163,-461.9999999999933); NKHub("hub14")
+position(745.999999999999,-451.9999999999935); NKHub("hub15")
+position(259.3333333333425,-265.33333333333076); NKHub("hub16")
+position(86.39540679349928,-301.0086586882294); NKHub("hub2")
+position(-26.010990410498025,-209.50581185881452); NKHub("hub3")
+position(21.51994871804956,-109.6020443320289); NKHub("hub1")
+position(122.82472757320068,81.83454559871163); NKHub("hub4")
+position(-107.33333333331635,71.3333333333288); NKHub("hub17")
+position(-0.6666666666519632,111.33333333332801); NKHub("hub18")
+position(632.7392028935025,317.2474359113085); NKHub("hub9")
+position(858.6887142126058,-165.1734223040664); NKRouter("as20r1")
+position(687.375707758788,-0.03895674508752123); NKHub("hub12")
+position(877.8166668970288,128.8443399369703); NKHub("hub7")
+position(851.1829724509971,217.43060966043367); NKHub("hub5")
+position(984.544105045359,-292.3693692725062); NKRouter("as20r2")
+position(1114.242618080474,-185.04030242504564); NKRouter("as20r3")
+position(1120.7105642691752,-82.28218190198449); NKHub("hub6")
+position(564.6666666666663,-391.9999999999999); NKRouter("as70r1")
+<\nodes>
+<connections>
+<link>
+Connect("as30r2")
+To("hub1")
+<\link>
+<link>
+Connect("as30r2")
+To("as30r1")
+<\link>
+<link>
+Connect("as30r1")
+To("as30r3")
+<\link>
+<link>
+Connect("as30r1")
+To("as40r1")
+<\link>
+<link>
+Connect("as20r1")
+To("as20r2")
+<\link>
+<link>
+Connect("as20r2")
+To("as20r3")
+<\link>
+<link>
+Connect("as20r3")
+To("hub6")
+<\link>
+<link>
+Connect("as20r1")
+To("as40r1")
+<\link>
+<link>
+Connect("as20r1")
+To("as10r1")
+<\link>
+<link>
+Connect("as10r1")
+To("as40r1")
+<\link>
+<link>
+Connect("as30r1")
+To("as50r1")
+<\link>
+<link>
+Connect("hub13")
+To("as40r1")
+<\link>
+<link>
+Connect("as40r1")
+To("hub12")
+<\link>
+<link>
+Connect("as50r1")
+To("hub8")
+<\link>
+<link>
+Connect("as50r1")
+To("hub9")
+<\link>
+<link>
+Connect("hub11")
+To("as10r1")
+<\link>
+<link>
+Connect("as10r1")
+To("hub10")
+<\link>
+<link>
+Connect("as30r1")
+To("as10r1")
+<\link>
+<link>
+Connect("as30r3")
+To("hub2")
+<\link>
+<link>
+Connect("hub3")
+To("as30r3")
+<\link>
+<link>
+Connect("hub4")
+To("as30r2")
+<\link>
+<link>
+Connect("as20r1")
+To("as60r1")
+<\link>
+<link>
+Connect("as60r1")
+To("as50r1")
+<\link>
+<link>
+Connect("as60r1")
+To("hub5")
+<\link>
+<link>
+Connect("as60r1")
+To("hub7")
+<\link>
+<link>
+Connect("as40r1")
+To("as60r1")
+<\link>
+<link>
+Connect("as30r1")
+To("as70r1")
+<\link>
+<link>
+Connect("as70r1")
+To("as20r1")
+<\link>
+<link>
+Connect("hub14")
+To("as70r1")
+<\link>
+<link>
+Connect("hub15")
+To("as70r1")
+<\link>
+<link>
+Connect("hub16")
+To("as30r3")
+<\link>
+<link>
+Connect("as30r2")
+To("hub17")
+<\link>
+<link>
+Connect("as30r2")
+To("hub18")
+<\link>
+<link>
+Connect("as40r1")
+To("as50r1")
+<\link>
+<\connections>

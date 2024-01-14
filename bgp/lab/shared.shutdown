@@ -1,0 +1,12 @@
+#! /bin/bash
+
+HOST=`hostname`
+
+sharedDir="/shared/${HOST}"
+
+mkdir -p $sharedDir
+
+cp -rf /etc $sharedDir
+cp -rf /root $sharedDir
+
+

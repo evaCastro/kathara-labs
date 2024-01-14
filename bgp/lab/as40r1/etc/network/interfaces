@@ -1,0 +1,43 @@
+auto lo
+iface lo inet loopback
+
+# An example ethernet card setup: (broadcast and gateway are optional)
+#
+# automatically added when upgrading
+auto eth0
+iface eth0 inet static
+     address 100.7.0.40
+     netmask 255.255.255.0
+
+auto eth1
+iface eth1 inet static
+     address 100.1.0.40
+     netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+     address 100.3.0.40
+     netmask 255.255.255.0
+
+auto eth3
+iface eth3 inet static
+     address 14.0.0.1
+     netmask 255.255.0.0
+
+auto eth4
+iface eth4 inet static
+     address 14.1.0.1
+     netmask 255.255.0.0
+
+auto eth5
+iface eth5 inet static
+     address 100.8.0.40
+     netmask 255.255.255.0
+
+auto eth6
+iface eth6 inet static
+     address 100.11.0.40
+     netmask 255.255.255.0
+
+
+
