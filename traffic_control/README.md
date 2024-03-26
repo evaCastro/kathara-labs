@@ -147,3 +147,20 @@ Captured traffic at r3(eth2) <a href="https://github.com/evaCastro/kathara-labs/
 <img src="https://github.com/evaCastro/kathara-labs/blob/main/traffic_control/images/flows.png"
      alt="Flows"
      style="float: left; margin-right: 10px;" width=700 />
+
+# Start scenario
+You can get your own pcap file using kathará.
+
+From **lab** repository directory: 
+
+   ```kathara lstart --shared --terminal gnome-terminal```
+
+From r3 terminal, launch tcpdump to save traffic into a file:
+
+```tcpdump -i eth2 -s 0 -w /share/r3-eth2.pcap```
+
+From pc1, pc2 and pc3 terminals, start iperf script:
+
+   ```/root/iperf-client.sh```
+
+Stop tcpdump and use wireshark to study traffic.
