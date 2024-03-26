@@ -8,3 +8,4 @@ Learn network protocols by studying traffic capture files:
    - [HTTP:](https://github.com/evaCastro/kathara-labs/blob/main/http) HTTP server and HTTP proxy.
    - [HTTPS:](https://github.com/evaCastro/kathara-labs/blob/main/https) TLS1.3 Handshake
    - [BGP:](https://github.com/evaCastro/kathara-labs/blob/main/bgp) simple configuration
+   - [tc:](https://github.com/evaCastro/kathara-labs/blob/main/traffic_control) traffic control: ingress/root qdisc configuration 

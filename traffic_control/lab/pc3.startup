@@ -1,0 +1,7 @@
+#!/bin/bash
+
+HOST=`hostname`
+
+chmod 700 /root/iperf-client.sh
+
+

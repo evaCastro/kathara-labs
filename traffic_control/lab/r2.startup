@@ -1,0 +1,8 @@
+#!/bin/bash
+
+HOST=`hostname`
+
+chmod 700 /root/ingress-policy.sh
+/root/ingress-policy.sh
+
+
