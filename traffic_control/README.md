@@ -5,31 +5,42 @@
      style="float: left; margin-right: 10px;" width=700 />
 
 ### Two iperf server2 at pc4, pc5, pc6 (ports 5001 and 5002)
+
     iperf3 -s -p 5001 &
     iperf3 -s -p 5002 &
 
 ### Script to send traffic from pc1 -> pc4 (/root/iperf-client.sh)
+
 2Mbit DS=0x88 to pc4 port 5001 -> AF41 
+
     iperf3 -c 16.0.0.40 -p 5001 -i 1 -u -b 2M -S 0x88 &
 
 1Mbit DS=0x68 to pc4 port 5002 -> AF31 
+
     iperf3 -c 16.0.0.40 -p 5002 -i 1 -u -b 1M -S 0x68 &
 
 ### Script to send traffic from pc2 -> pc5 (/root/iperf-client.sh)
+
 2Mbit DS=0x48 to pc5 port 5001 -> AF21 
+
     iperf3 -c 16.0.0.50 -p 5001 -i 1 -u -b 2M -S 0x48 &
     
 1Mbit DS=0x28 to pc5 port 5002 -> AF11 
+
     iperf3 -c 16.0.0.50 -p 5002 -i 1 -u -b 1M -S 0x28 &
 
 ### Script to send traffic from pc3 -> pc6 (/root/iperf-client.sh)
+
 2Mbit DS=0x48 to pc6 port 5001 -> AF31 
+
     iperf3 -c 16.0.0.60 -p 5001 -i 1 -u -b 2M -S 0x68 &
 
 1Mbit DS=0x28 to pc6 port 5002 -> AF21 
+
     iperf3 -c 16.0.0.60 -p 5002 -i 1 -u -b 1M -S 0x48 &
     
 ### Ingress policy qdisc at r1
+
 Limit traffic from pc1 and pc2
     tc qdisc del dev eth0 ingress 2> /dev/null
 
@@ -65,6 +76,7 @@ Limit traffic from pc1 and pc2
         police rate 100kbit burst 10k drop flowid :4
 
 ### Ingress policy qdisc at r2
+
 Limit traffic from pc3
     tc qdisc del dev eth0 ingress 2> /dev/null
 
@@ -88,6 +100,7 @@ Limit traffic from pc3
 
 ### Root htb qdisc at r3
 
+HTB configuration at r3(eth2)
     tc qdisc del dev eth2 root 2> /dev/null
 
     echo "Adding htb qdisc..."
