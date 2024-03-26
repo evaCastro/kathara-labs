@@ -18,6 +18,8 @@
    - dnsemp1: pc1 and dnsemp1 are configured to use dnsemp1 as DNS server.
    - dnsemp2: pc2 and dnsemp2 are configured to use dnsemp2 as DNS server.
 
+
 ## Capture files:
    - Capture file <a href="https://github.com/evaCastro/kathara-labs/blob/main/dns/pcaps/dns1.pcap">dns1.pcap</a>. From pc1:
-         - nslookup -type=A pc2.emp2.net 
+     
+         - nslookup -query=A pc2.emp2.net 
