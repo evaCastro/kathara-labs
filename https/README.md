@@ -53,7 +53,7 @@ From pc2 terminal, start apache2 sever (password: ```pc2.emp2.com```):
 
 From r1 terminal, launch tcpdump to save traffic into a file:
 
-```tcpdump -i eth0 -s 0 -w /share/https.cap```
+```tcpdump -i eth0 -s 0 -w /share/https.pcap```
 
 From pc1 terminal: 
 
