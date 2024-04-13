@@ -6,6 +6,12 @@
 
 There is a TCP echo server at `pc2` (/root/server.py) and a TCP echo client at  `pc1` (/root/client.py). Both files from https://superuser.blog/tcp-fast-open-python.
 
+`pc1` and `pc2` are configured using:
+
+     sysctl -w net.ipv4.tcp_fastopen=3
+
+
+
 
 ## Capture files:
 
