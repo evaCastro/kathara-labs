@@ -4,12 +4,7 @@
      alt="TCP config"
      style="float: left; margin-right: 10px;" width=700 />
 
-
-### TCP Server
-   - pc2
-
-### TCP Client
-   - pc1
+There is a TCP echo server at `pc2` (/root/server.py) and a TCP echo client at  `pc1` (/root/client.py). Both files from https://superuser.blog/tcp-fast-open-python.
 
 
 ## Capture files:
