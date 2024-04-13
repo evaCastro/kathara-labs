@@ -1,0 +1,14 @@
+######################################################################
+# /etc/network/interfaces -- configuration file for ifup(8), ifdown(8)
+
+auto lo
+iface lo inet loopback
+
+
+auto eth0
+iface eth0 inet static
+     hwaddress ether 52:1b:93:90:b8:2d
+     address 13.0.0.20
+     netmask 255.255.255.0
+     gateway 13.0.0.2
+
