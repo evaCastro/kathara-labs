@@ -16,6 +16,6 @@
 
    - Capture file <a href="https://github.com/evaCastro/kathara-labs/blob/main/tcp_fto/pcaps/tcp_fto.pcap">tcp_fto.pcap</a>
    
-         - From pc2: python3 server.py: TCP echo server at port 9000
-         - From pc1: python3 client.py: TCP echo client connects to pc2:9000
+         - From pc2: python3 /root/server.py: TCP echo server at port 9000
+         - From pc1: python3 /root/client.py: TCP echo client connects to pc2:9000
      
