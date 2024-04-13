@@ -9,3 +9,4 @@ Learn network protocols by studying traffic capture files:
    - [HTTPS:](https://github.com/evaCastro/kathara-labs/blob/main/https) TLS1.3 Handshake
    - [BGP:](https://github.com/evaCastro/kathara-labs/blob/main/bgp) simple configuration
    - [tc:](https://github.com/evaCastro/kathara-labs/blob/main/traffic_control) traffic control: ingress/root qdisc configuration 
+   - [TCP FTO:](https://github.com/evaCastro/kathara-labs/blob/main/tcp_fto) TCP Fast Open: Fast Open using client/server TCP
